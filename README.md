@@ -1,22 +1,22 @@
 # nastool
 
-A little toolbox to improve the efficiency of finite element modeling by modifying .bdf file.
+A fully functional toolbox to improve the efficiency of finite element modeling by modifying .bdf file.
 
 ## TO-DO
 
 ### Recently
 
-- [ ] Add co-ordinate transfer function.
+- [ ] Design a fully functional software architecture based on current requirements.
+- [ ] Parse .bdf file.
+- [ ] Implement calculator functions of centroid, volume and mass.
 
 ### Long-term
 
-- [ ] Add graphical user interface.
+- [ ] Write fully functional .bdf file read and write software.
+- [ ] Pick the functions that are easy to implement on the GUI and write the corresponding GUI.
 
 ## Done Already
 
 ### **@20220621**
 
-- [x] Read .bdf file.
-- [x] Read .csv file.
-- [x] Add infomations of mass points to .bdf file.
-- [x] Overwrite .bdf file.
+- [x] According to the mass point distribution information, generate a .bdf file containing only the mass point elements of conm2.

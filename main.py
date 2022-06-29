@@ -1,12 +1,11 @@
-import nastool.bdf as bdf
-import nastool.mass_point as mp
+import qnas.ui as ui
+from qnas.ui import QtWidgets, QtCore, QtGui, sys
 
-## function: read mass-point-map from .csv file and write to .bdf file.
+#enable highdpi scaling
+QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, False)
+#use highdpi icons
+QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_UseHighDpiPixmaps, True)
 
-model = bdf.create_bdf()
-
-massmap = mp.read_mass_point_from_csv("D:/ProjectX/Workp/CATCH/Input/质量点信息.csv")
-# print(massmap)
-model = mp.massmap_to_bdf(massmap, model)
-
-model.write_bdf("D:/ProjectX/Workp/CATCH/Input/mass.bdf")
+app = QtWidgets.QApplication(sys.argv)
+gui = ui.GUI()
+sys.exit(app.exec_())
